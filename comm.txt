@@ -1,0 +1,11 @@
+// Adegoke
+So lets start this. what feature do we build now ?
+
+// Best
+this is really cool man, i want to work on refactoring to MVC pattern
+
+// Adegoke
+cut the excitement man, lets get this done
+
+//Adegoke
+okay lemme work on the user registration now

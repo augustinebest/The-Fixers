@@ -53,4 +53,3 @@ module.exports.getArtisans = (callback, limit) => {
 module.exports.addArtisan = (artisan, callback) => {
     Artisan.create(artisan, callback);
 };
-

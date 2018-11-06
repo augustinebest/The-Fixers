@@ -5,7 +5,7 @@ import axios from 'axios';
 export default class SignInUser extends Component {
 
     state = {
-        username: null,
+        email: null,
         password: null
     }
 
@@ -26,22 +26,22 @@ export default class SignInUser extends Component {
         this.setState({
             loading: true
         });
-        let { username, password } = this.state;
-        const detail = { username, password };
+        let { email, password } = this.state;
+        const detail = { email, password };
         console.log(detail);
         this.signin(detail);
         this.props.history.replace('/requestService')
     }
 
     render() {
-        const { username, password } = this.state;
+        const { email, password } = this.state;
 
         return (
             <Fragment>
                 <div className='Artisan-Reg'>
                     <label> User SignIn </label>
                     <form className='Artisan-Reg-Form' onSubmit={this.handleSubmit}>
-                        <input type='text' required placeholder='Username' required name='name' onChange={this.handleChange} value={username} />
+                        <input type='email' required placeholder='Email' required name='name' onChange={this.handleChange} value={email} />
                         <input type='password' required placeholder='Password' required name='phoneNumber' onChange={this.handleChange} value={password} />
                         <br />
                         <br />

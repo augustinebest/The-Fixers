@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <Fragment>
         <div className='App-body'>
-          <p> Feel free to <NavLink to='/requestService'> Request </NavLink> a service </p>
+          <p> Feel free to <NavLink to='/user/requestService'> Request </NavLink> a service </p>
         </div>
       </Fragment >
     )

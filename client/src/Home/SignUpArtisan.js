@@ -28,6 +28,7 @@ export default class SignUpArtisan extends Component {
             });
     }
 
+    
     handleSubmit = event => {
         this.setState({
             loading: true

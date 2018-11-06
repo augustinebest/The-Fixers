@@ -6,6 +6,7 @@ export default class SignUpUser extends Component {
 
     state = {
         name: '',
+        email: '',
         phoneNumber: '',
         location: '',
         address: '',
@@ -32,15 +33,15 @@ export default class SignUpUser extends Component {
         this.setState({
             loading: true
         });
-        let { name, phoneNumber, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable } = this.state;
-        const artisan = { name, phoneNumber, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable };
+        let { name, phoneNumber, email, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable } = this.state;
+        const artisan = { name, email, phoneNumber, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable };
         console.log(artisan);
         this.addArtisan(artisan);
         this.props.history.replace('/requestService')
     }
 
     render() {
-        const { name, phoneNumber, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable } = this.state;
+        const { name, email, phoneNumber, location, address, JobDescription, pictures, ExperienceLevel, DateAvailable } = this.state;
 
         return (
             <Fragment>
@@ -48,6 +49,7 @@ export default class SignUpUser extends Component {
                     <label> User Register/SignUp </label>
                     <form className='Artisan-Reg-Form' onSubmit={this.handleSubmit}>
                         <input type='text' required placeholder='Enter Name' required name='name' onChange={this.handleChange} value={name} />
+                        <input type='email' required placeholder='Email' required name='email' onChange={this.handleChange} value={email} />
                         <input type='number' required placeholder='Phone Contact' required name='phoneNumber' onChange={this.handleChange} value={phoneNumber} />
                         <input type='text' required placeholder='Location' required name='location' onChange={this.handleChange} value={location} />
                         <input required type='text' placeholder='Address' required name='address' onChange={this.handleChange} value={address} />
