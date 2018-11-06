@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 //Genre schema for the application
-var artisanSchema = mongoose.Schema({
+const artisanSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -41,16 +41,4 @@ var artisanSchema = mongoose.Schema({
     }
 });
 
-var Artisan = module.exports = mongoose.model('Artisan', artisanSchema);
-
-//get Artisans
-module.exports.getArtisans = (callback, limit) => {
-    Artisan.find(callback).limit(limit);
-};
-
-
-//post Artisan
-module.exports.addArtisan = (artisan, callback) => {
-    Artisan.create(artisan, callback);
-};
-
+module.exports = mongoose.model('Artisan', artisanSchema);
