@@ -3,40 +3,34 @@ const mongoose = require('mongoose');
 //Genre schema for the application
 const artisanSchema = mongoose.Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     phoneNumber: {
-        type: Number,
-        required: true
+        type: Number
     },
-    JobDescription: {
-        type: String,
-        required: true
+    jobDescription: {
+        type: String
     },
     address: {
-        type: String,
-        required: true
+        type: String
     },
     location: {
-        type: String,
-        required: true
-
+        type: String
+    },
+    imageID: {
+        type: String
     },
     pictures: {
-        type: String,
-        required: true
+        type: String
     },
-    DateAvailable: {
-        type: Date,
-        required: true
+    dateAvailable: {
+        type: String
     },
-    ExperienceLevel: {
-        type: Number,
-        required: true
+    experienceLevel: {
+        type: Number
     },
     create_date: {
-        type: Date,
+        type: String,
         default: Date.now
     }
 });
