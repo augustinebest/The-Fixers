@@ -2,17 +2,35 @@ const mongoose = require('mongoose');
 
 //Genre schema for the application
 const artisanSchema = mongoose.Schema({
-    name: {
-        type: String
+    firstName: {
+        type: String,
+        require: true,
+    },
+    lastName: {
+        type: String,
+        require: true,
     },
     phoneNumber: {
-        type: Number
+        type: Number,
+        require: true,
     },
     jobDescription: {
-        type: String
+        type: String,
+        require: true,
+    },
+    password: {
+        type: String,
+        require: true,
+    },
+    email: {
+        type: String,
+        unique: true,
+        require: true,
+        match: /[a-zs0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     },
     address: {
-        type: String
+        type: String,
+        require: true,
     },
     location: {
         type: String
@@ -24,10 +42,12 @@ const artisanSchema = mongoose.Schema({
         type: String
     },
     dateAvailable: {
-        type: String
+        type: String,
+        require: true,
     },
     experienceLevel: {
-        type: Number
+        type: Number,
+        require: true,
     },
     create_date: {
         type: String,
