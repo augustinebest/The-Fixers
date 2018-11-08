@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-//Genre schema for the application
 const artisanSchema = mongoose.Schema({
     firstName: {
         type: String,
