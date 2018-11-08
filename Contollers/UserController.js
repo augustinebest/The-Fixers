@@ -59,3 +59,7 @@ exports.signup = (req, res, next) => {
         res.json({ error: error, code: 18 });
     }
 }
+
+exports.login = (req, res, next) => {
+    res.json('Yay');
+}
