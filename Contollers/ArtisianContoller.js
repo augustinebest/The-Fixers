@@ -7,9 +7,9 @@ exports.addArtisans = (req, res, next) => {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         phoneNumber: req.body.phoneNumber,
+        email: req.body.email,
         jobDescription: req.body.JobDescription,
         password: req.body.password,
-        email: req.body.email,
         imageID: '',
         address: req.body.address,
         location: req.body.location,
@@ -18,7 +18,7 @@ exports.addArtisans = (req, res, next) => {
         experienceLevel: req.body.ExperienceLevel
     });
     try {
-        if(req.body.name == '' || req.body.name == null || req.body.phoneNumber == '' || req.body.phoneNumber == null || req.body.email == '' || req.body.email == null || req.body.password == '' || req.body.password == null || req.body.jobDescription == '' || req.body.jobDescription == null  || req.body.address == '' || req.body.address == null || req.body.location == '' || req.body.location == null || req.body.dateAvailable == '' || req.body.dateAvailable == null) {
+        if(req.body.firstName == '' || req.body.firstName == null || req.body.lastName == '' || req.body.lastName == null || req.body.phoneNumber == '' || req.body.phoneNumber == null || req.body.email == '' || req.body.email == null || req.body.password == '' || req.body.password == null || req.body.jobDescription == '' || req.body.jobDescription == null  || req.body.address == '' || req.body.address == null || req.body.location == '' || req.body.location == null || req.body.dateAvailable == '' || req.body.dateAvailable == null) {
             res.json({message: 'The field(s) are required', code: 9});
         } else {
             if(req.body.name.length < 4) {
