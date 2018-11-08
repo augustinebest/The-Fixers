@@ -17,7 +17,6 @@ app.use((req, res, next) => {
 });
 
 // Routes
-const ArtisanRoutes = require('./routes/Artisian'); 
 const UserRoutes = require('./routes/User');
 
 //middleware
@@ -37,7 +36,6 @@ app.get('/', (req, res) => {
     res.send(' Use the /api/artisan endpoint');
 });
 
-app.use('/artisians', ArtisanRoutes);
 app.use('/user', UserRoutes);
 
 app.use((req, res, next) => {
