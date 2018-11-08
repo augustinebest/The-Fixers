@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 // Routes
 const ArtisanRoutes = require('./routes/Artisian'); 
-
+const UserRoutes = require('./routes/User');
 
 //middleware
 app.use(bodyParser.json());
@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/artisians', ArtisanRoutes);
+app.use('/user', UserRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Not Found');
